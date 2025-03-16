@@ -1,9 +1,11 @@
 let a = true;
 
+number = 0
+
 setTimeout(() => {
     a = false;
-}, 2000)
+}, 1000)
 
 while (a) {
-    console.log(' -- inside whilee -- ');
+    console.log(' -- inside whilee -- ' + number++ + a);
 }

@@ -1,14 +1,15 @@
+//common2Array.js
+
+
 function common(a, b) {
-    console.log(a);
-    console.log(b);
-    let arr = [];
-    for (let i = 0; i < b.length; i++) {
-        if (a.includes(b[i])) {
-            arr.push(b[i])
+    let array=[];
+    for(let i=0 ; i < a.length ; i++){
+        if(b.includes(a[i])){
+            array.push(a[i]);
         }
     }
-    return arr;
+    return array
 }
-a = [1, 2, 3, 4, 5, 6];
-b = [1, 2, 3];
+b = [1, 2, 3, 4, 5, 6];
+a = [1, 2, 3];
 console.log(common(a, b));

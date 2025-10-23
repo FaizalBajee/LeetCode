@@ -95,18 +95,12 @@ maxProfit(prices);
 const prices1 = [7, 1, 5, 3, 6, 4];
 
 const maxProfit1 = (prices1) => {
-  let Min = Infinity;
-  let buyDays = [];
-
-  let MaxProfit = 0;
+  let totalProfit = 0;
 
   for (let i = 0; i < prices1.length; i++) {
     if (prices1[i] > prices1[i - 1]) {
-      Min = prices1[i];
+      totalProfit += prices[i] - prices[i - 1];
     }
-    let profit = prices1[i] - Min;
-    console.log(profit);
-    // console.log(Min);
   }
 };
 

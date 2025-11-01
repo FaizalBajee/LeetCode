@@ -499,4 +499,30 @@ function patternV(n) {
   }
 }
 
+// patternV(5);
+
+//  for/
+function patternV(n) {
+  for (let i = 1; i <= n; i++) {
+    line = "";
+    for (let j = 1; j <= n; j++) {
+      // console.log(2 + j ,6 - j )
+      if (
+        (i >= Math.ceil(n/2) && j == j && i == Math.floor(n/2) + j) ||
+        (i >= Math.ceil(n / 2) && j == j && i == Math.floor(n/2) + j) ||
+        (i >= Math.ceil(n / 2) && i == Math.floor(n/2) + j && j == n+1 - j) ||
+        (j == 1 && i < Math.ceil(n/2)) ||
+        (j == n && i <= 3) ||
+        (j == i && i == n - 1)
+      ) {
+        line += "*";
+      } else {
+        line += " ";
+      }
+    }
+    console.log(line);
+  }
+}
+
 patternV(5);
+

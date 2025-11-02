@@ -524,5 +524,5 @@ function patternV(n) {
   }
 }
 
-patternV(5);
+// patternV(5); not completed
 

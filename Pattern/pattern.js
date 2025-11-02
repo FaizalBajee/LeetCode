@@ -483,10 +483,12 @@ function patternV(n) {
     for (let j = 1; j <= n; j++) {
       // console.log(2 + j ,6 - j )
       if (
-        (i >= Math.ceil(n/2) && j == j && i == Math.floor(n/2) + j) ||
-        (i >= Math.ceil(n / 2) && j == j && i == Math.floor(n/2) + j) ||
-        (i >= Math.ceil(n / 2) && i == Math.floor(n/2) + j && j == n+1 - j) ||
-        (j == 1 && i < Math.ceil(n/2)) ||
+        (i >= Math.ceil(n / 2) && j == j && i == Math.floor(n / 2) + j) ||
+        (i >= Math.ceil(n / 2) && j == j && i == Math.floor(n / 2) + j) ||
+        (i >= Math.ceil(n / 2) &&
+          i == Math.floor(n / 2) + j &&
+          j == n + 1 - j) ||
+        (j == 1 && i < Math.ceil(n / 2)) ||
         (j == n && i <= 3) ||
         (j == i && i == n - 1)
       ) {
@@ -508,10 +510,12 @@ function patternV(n) {
     for (let j = 1; j <= n; j++) {
       // console.log(2 + j ,6 - j )
       if (
-        (i >= Math.ceil(n/2) && j == j && i == Math.floor(n/2) + j) ||
-        (i >= Math.ceil(n / 2) && j == j && i == Math.floor(n/2) + j) ||
-        (i >= Math.ceil(n / 2) && i == Math.floor(n/2) + j && j == n+1 - j) ||
-        (j == 1 && i < Math.ceil(n/2)) ||
+        (i >= Math.ceil(n / 2) && j == j && i == Math.floor(n / 2) + j) ||
+        (i >= Math.ceil(n / 2) && j == j && i == Math.floor(n / 2) + j) ||
+        (i >= Math.ceil(n / 2) &&
+          i == Math.floor(n / 2) + j &&
+          j == n + 1 - j) ||
+        (j == 1 && i < Math.ceil(n / 2)) ||
         (j == n && i <= 3) ||
         (j == i && i == n - 1)
       ) {
@@ -524,5 +528,24 @@ function patternV(n) {
   }
 }
 
-// patternV(5); not completed
+// patternV(5); #not completed
 
+function patternW(n) {
+  for (let i = 1; i <= n; i++) {
+    line = "";
+    for (let j = 1; j <= n; j++) {
+      if (j == 1 || j == n) {
+        line += "*";
+      } else if (
+        (i >= Math.ceil(n / 2) && j == n - i + 1) ||
+        (i >= Math.ceil(n / 2) && i == j)
+      ) {
+        line += " *";
+      } else {
+        line += "  ";
+      }
+    }
+    console.log(line);
+  }
+}
+patternW(11);

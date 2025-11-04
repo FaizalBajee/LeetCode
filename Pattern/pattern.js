@@ -503,7 +503,7 @@ function patternV(n) {
 
 // patternV(5);
 
-//  for/
+//  for\
 function patternV(n) {
   for (let i = 1; i <= n; i++) {
     line = "";

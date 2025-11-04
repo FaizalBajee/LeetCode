@@ -548,4 +548,53 @@ function patternW(n) {
     console.log(line);
   }
 }
-patternW(11);
+// patternW(11);
+
+function patternX(n) {
+  for (let i = 1; i < n; i++) {
+    let line = "";
+    for (let j = 1; j < n; j++) {
+      if (j == n - i || i == j) {
+        line += "*";
+      } else {
+        line += " ";
+      }
+    }
+    console.log(line);
+  }
+}
+// patternX(10);
+
+function patternY(n) {
+  for (let i = 1; i < n; i++) {
+    let line = "";
+    for (let j = 1; j < n; j++) {
+      if (
+        (j == n - i && i < Math.ceil(n / 2)) ||
+        (i == j && i < Math.ceil(n / 2)) ||
+        (j == Math.ceil(n / 2) && i >= Math.ceil(n / 2))
+      ) {
+        line += "*";
+      } else {
+        line += " ";
+      }
+    }
+    console.log(line);
+  }
+}
+// patternY(10);
+
+function patternZ(n) {
+  for (let i = 1; i <= n; i++) {
+    let line = "";
+    for (let j = 1; j <= n; j++) {
+      if (i == 1 || i == n || j == n + 1 - i) {
+        line += "*";
+      } else {
+        line += " ";
+      }
+    }
+    console.log(line);
+  }
+}
+// patternZ(5);

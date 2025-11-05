@@ -54,7 +54,7 @@ function rotateAnticlockwise(arr, k) {
 // rotateAnticlockwise(arr, k);
 // console.log(arr.join(" "));
 
-//methord 2
+//methord 2 (best practice) ✅
 
 function rotateClockwise2(arr, k) {
   // k = k % n; - if k is more then 2 digit
@@ -79,6 +79,27 @@ function rotateClockwise2(arr, k) {
 
 // #left
 
+function rotateLeft(arr, k) {
+  let n = arr.length;
+  let temp = [];
+
+  for (let i = 0; i < n; i++) {
+    if (i >= k) {
+      temp.push(arr[i]);
+    }
+  }
+
+  for (let i = 0; i <  k; i++) {
+    temp.push(arr[i]);
+  }
+
+  console.log(temp);
+}
+
+let arr = [1, 2, 3, 4, 5, 6];
+let k = 3;
+rotateLeft(arr, k);
+
 //method - 3
 
 //Don’t rely on one method for every problem — forget the old one and choose the best method for the current problem
@@ -86,7 +107,7 @@ function method3(arr, k) {
   //   console.log(arr);
   let n = arr.length;
   let helperHouse = [];
-  //working but not a good practice (swap func) 
+  //working but not a good practice (swap func)
   function swap(initial, k) {
     for (let i = initial; i > 0; i--) {
       for (let j = i - 1; j >= 0; j--) {
@@ -114,9 +135,8 @@ function method3(arr, k) {
   console.log(arr);
 }
 
-let arr = [1, 2, 3, 4, 5, 6];
-let k = 3;
-method3(arr, k);
-
+// let arr = [1, 2, 3, 4, 5, 6];
+// let k = 3;
+// method3(arr, k);
 
 // #left

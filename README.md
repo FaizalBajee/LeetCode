@@ -11,6 +11,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0014-longest-common-prefix](https://github.com/FaizalBajee/LeetCode/tree/master/0014-longest-common-prefix) |
+| [1796-second-largest-digit-in-a-string](https://github.com/FaizalBajee/LeetCode/tree/master/1796-second-largest-digit-in-a-string) |
 ## Trie
 |  |
 | ------- |
@@ -27,4 +28,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0048-rotate-image](https://github.com/FaizalBajee/LeetCode/tree/master/0048-rotate-image) |
+## Hash Table
+|  |
+| ------- |
+| [1796-second-largest-digit-in-a-string](https://github.com/FaizalBajee/LeetCode/tree/master/1796-second-largest-digit-in-a-string) |
 <!---LeetCode Topics End-->
